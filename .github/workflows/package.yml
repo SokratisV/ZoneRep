@@ -1,0 +1,28 @@
+name: Package and release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write   # GITHUB_TOKEN needs this to create/update the Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0   # full history so the packager can see the tags
+
+      - name: Package and release
+        uses: BigWigsMods/packager@v2
+        env:
+          # Built in to every run - no setup needed. Publishes the GitHub Release.
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          # Add this secret + ## X-Curse-Project-ID in the .toc to enable CurseForge.
+          # Until both exist, the packager just skips the CurseForge upload.
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}

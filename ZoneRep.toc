@@ -1,0 +1,17 @@
+## Interface: 16001
+## Title: ZoneRep
+## Notes: Reputation per zone, from Questie's quest data: what each zone's quests give, what you have earned and what is left, with the quests listed and markable on the map, plus the rep you gain from kills and other sources while you play.
+## Author: Sokratis
+## Version: 1.0.0
+## Category: Quests
+## Dependencies: Questie
+## OptionalDeps: FlareUI
+## SavedVariables: ZoneRepDB
+## IconTexture: Interface\Icons\Achievement_Reputation_01
+## X-License: MIT
+## X-Website: https://github.com/SokratisV/ZoneRep
+## X-Curse-Project-ID: 000000
+
+Core.lua
+Map.lua
+UI.lua
