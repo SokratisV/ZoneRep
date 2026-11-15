@@ -10,7 +10,7 @@
 ## IconTexture: Interface\Icons\Achievement_Reputation_01
 ## X-License: MIT
 ## X-Website: https://github.com/SokratisV/ZoneRep
-## X-Curse-Project-ID: 000000
+## X-Curse-Project-ID: 1808645
 
 Core.lua
 Map.lua
